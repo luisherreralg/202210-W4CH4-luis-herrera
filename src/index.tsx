@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
 import { App } from './infrastructure/componentes/app/app';
+import { RobotContextProvider } from './infrastructure/context/provider';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -9,7 +11,11 @@ const root = ReactDOM.createRoot(
 );
 root.render(
     <React.StrictMode>
-        <App />
+        <Router>
+            <RobotContextProvider>
+                <App />
+            </RobotContextProvider>
+        </Router>
     </React.StrictMode>
 );
 
