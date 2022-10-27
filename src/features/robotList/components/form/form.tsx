@@ -6,8 +6,8 @@ export function Form() {
     const { handleAdd } = useContext(RobotContext);
 
     const initialForm: IRobot = {
-        name: ``,
-        img: ``,
+        name: '',
+        img: '',
         speed: 0,
         resistance: 0,
         creationDate: 0,
@@ -24,12 +24,15 @@ export function Form() {
 
     const handleClick = (ev: SyntheticEvent) => {
         ev.preventDefault();
+        if (form.img === '' || form.name === '') {
+            return;
+        }
         handleAdd(form);
     };
 
     return (
         <>
-            <h2>Create your own robot</h2>
+            <h3>Create your own robot</h3>
             <form>
                 <div>
                     <input

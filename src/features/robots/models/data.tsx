@@ -23,7 +23,7 @@ export const data = [
     },
     {
         name: 'Baymax',
-        img: 'https://lumiere-a.akamaihd.net/v1/images/pp_baymax_herobanner_mobile_22586_56a97a34.jpeg?region=0,0,640,480',
+        img: 'https://thumbs.gfycat.com/BeautifulMeagerAngora-size_restricted.gif',
         speed: -2,
         resistance: 10,
         creationDate: 2014,
