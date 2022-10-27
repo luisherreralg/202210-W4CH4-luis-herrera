@@ -1,4 +1,4 @@
-import { IRobot } from '../../robots/models/data';
+import { IRobot } from '../models/data';
 
 const store = 'Robots';
 

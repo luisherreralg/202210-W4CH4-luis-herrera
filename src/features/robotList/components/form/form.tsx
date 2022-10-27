@@ -1,6 +1,6 @@
 import { SyntheticEvent, useContext, useState } from 'react';
 import { RobotContext } from '../../../../infrastructure/context/context';
-import { IRobot } from '../../../robots/models/data';
+import { IRobot } from '../../models/data';
 
 export function Form() {
     const { handleAdd } = useContext(RobotContext);

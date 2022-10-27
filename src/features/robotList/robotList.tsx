@@ -23,7 +23,7 @@ export function RobotList() {
                                 alt={item.name}
                                 onClick={handlerDeleteOnClick}
                             />
-                            <p>Name - {item.name}</p>
+                            <p>{item.name}</p>
                             <p>Resistance - {item.resistance}</p>
                             <p>Speed: {item.speed}</p>
                         </div>
