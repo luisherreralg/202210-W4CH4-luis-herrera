@@ -13,21 +13,23 @@ export function RobotList() {
 
     return (
         <>
-            {robots.map((item) => (
-                <li>
-                    <div>
-                        {' '}
-                        <img
-                            src={item.img}
-                            alt={item.name}
-                            onClick={handlerDeleteOnClick}
-                        />
-                        <p>Name - {item.name}</p>
-                        <p>Resistance - {item.resistance}</p>
-                        <p>Speed: {item.speed}</p>
-                    </div>
-                </li>
-            ))}
+            <ul>
+                {robots.map((item, index) => (
+                    <li key={index.toString()}>
+                        <div>
+                            {' '}
+                            <img
+                                src={item.img}
+                                alt={item.name}
+                                onClick={handlerDeleteOnClick}
+                            />
+                            <p>Name - {item.name}</p>
+                            <p>Resistance - {item.resistance}</p>
+                            <p>Speed: {item.speed}</p>
+                        </div>
+                    </li>
+                ))}
+            </ul>
             <Form></Form>
         </>
     );
