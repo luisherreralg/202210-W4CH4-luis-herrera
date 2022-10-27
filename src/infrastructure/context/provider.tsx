@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getStore, setStore } from '../../features/robotList/services/storage';
-import { data, IRobot } from '../../features/robots/models/data';
+import { data, IRobot } from '../../features/robotList/models/data';
 import { RobotContext } from './context';
 
 export function RobotContextProvider({ children }: { children: JSX.Element }) {
