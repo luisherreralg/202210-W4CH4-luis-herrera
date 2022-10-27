@@ -3,7 +3,6 @@ import { RobotContext } from '../../infrastructure/context/context';
 import { Form } from './components/form/form';
 
 export function RobotList() {
-    // const dataArray: Array<IRobot> = data;
     const { robots, handlerEraser } = useContext(RobotContext);
 
     const handlerDeleteOnClick = (ev: SyntheticEvent) => {

@@ -1,10 +1,15 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { getStore, setStore } from '../../features/robotList/services/storage';
 import { data, IRobot } from '../../features/robots/models/data';
 import { RobotContext } from './context';
 
 export function RobotContextProvider({ children }: { children: JSX.Element }) {
-    const initialRobots = data;
+    const initialRobots = getStore().length === 0 ? data : getStore();
     const [robots, setRobots] = useState(initialRobots);
+
+    useEffect(() => {
+        setStore(robots);
+    }, [robots]);
 
     const handleAdd = (obj: IRobot) => {
         setRobots([...robots, obj]);
